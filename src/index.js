@@ -26,8 +26,10 @@ mongoose.connect('mongodb://localhost:27017/api_proyecto', {
 // Routes
 const userRoutes = require('./routes/users');
 const productRoutes = require('./routes/products');
+const authRoutes = require('./routes/auth');
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/auth', authRoutes);
 
 // Simple route
 app.get('/hola', (req, res) => {
